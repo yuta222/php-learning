@@ -24,7 +24,7 @@
 最初にPHPが動くか確認します。
 
 ```bash
-php test.php
+php -v
 ```
 
 1. `question/questionN.php` を開いて問題文を読む
