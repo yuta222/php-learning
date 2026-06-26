@@ -1,6 +1,6 @@
 # PHP初級卒業カリキュラム
 
-このリポジトリは、プログラミング超初心者がPHPの初級を卒業するための練習用教材です。
+このリポジトリは、プログラミング超初心者がPHPの初級を卒業するための30題の練習用教材です。
 フレームワークやComposerは使わず、PHP本体だけで「書く、動かす、直す」を繰り返します。
 
 教材一覧ページ: https://yuta222.github.io/php-learning/
@@ -40,18 +40,18 @@ php question/question1.php
 php answer/answer1.php
 ```
 
-Webフォームの問題だけはPHP内蔵サーバーを使います。
+Webフォームの問題はPHP内蔵サーバーを使います。
 
 ```bash
 php -S 127.0.0.1:8000 -t question
 ```
 
-そのあとブラウザで `http://127.0.0.1:8000/question10.php` を開きます。
+そのあとブラウザで `http://127.0.0.1:8000/question10.php` または `http://127.0.0.1:8000/question28.php` を開きます。
 解答を見る場合は `-t answer` に変えてください。
 
 ## 学習順
 
-| 回 | テーマ | できるようになること | 問題 | 解答 |
+| 題 | テーマ | できるようになること | 問題 | 解答 |
 | --- | --- | --- | --- | --- |
 | 1 | はじめてのPHP | `echo` と改行を使って表示する | `question/question1.php` | `answer/answer1.php` |
 | 2 | 変数と計算 | 変数、数値計算、文字列結合を使う | `question/question2.php` | `answer/answer2.php` |
@@ -64,16 +64,36 @@ php -S 127.0.0.1:8000 -t question
 | 9 | CLI入力と検証 | コマンドライン引数を受け取り、入力チェックする | `question/question9.php` | `answer/answer9.php` |
 | 10 | Webフォーム | HTMLフォームから送られた値をPHPで処理する | `question/question10.php` | `answer/answer10.php` |
 | 11 | JSONファイル保存 | データをファイルに保存して読み込む | `question/question11.php` | `answer/answer11.php` |
-| 12 | クラスと卒業課題 | クラスで小さな図書管理アプリを作る | `question/question12.php` | `answer/answer12.php` |
+| 12 | クラス練習 | クラスで小さな図書管理アプリを作る | `question/question12.php` | `answer/answer12.php` |
+| 13 | 自己紹介カード | 変数を使って複数行の文章を作る | `question/question13.php` | `answer/answer13.php` |
+| 14 | 割り勘計算 | 割り算を使って1人あたりの金額を出す | `question/question14.php` | `answer/answer14.php` |
+| 15 | メール文を作る | 変数を文章に埋め込んで表示する | `question/question15.php` | `answer/answer15.php` |
+| 16 | 年齢で料金を決める | 年齢ごとに料金を判定する | `question/question16.php` | `answer/answer16.php` |
+| 17 | 在庫判定 | 注文数と在庫数を比べて判定する | `question/question17.php` | `answer/answer17.php` |
+| 18 | 九九の一段 | `for` で決まった回数だけ計算する | `question/question18.php` | `answer/answer18.php` |
+| 19 | カウントダウン | `while` で数を減らしながら表示する | `question/question19.php` | `answer/answer19.php` |
+| 20 | 買い物リスト | 配列を番号付きで表示する | `question/question20.php` | `answer/answer20.php` |
+| 21 | 合格者だけ表示 | 配列と条件分岐を組み合わせる | `question/question21.php` | `answer/answer21.php` |
+| 22 | 四角形の面積 | 関数で計算処理をまとめる | `question/question22.php` | `answer/answer22.php` |
+| 23 | あいさつ関数 | 関数内で空文字を判定する | `question/question23.php` | `answer/answer23.php` |
+| 24 | ユーザー一覧 | 連想配列の一覧を表示する | `question/question24.php` | `answer/answer24.php` |
+| 25 | 在庫表 | 連想配列と条件分岐を組み合わせる | `question/question25.php` | `answer/answer25.php` |
+| 26 | CLIで税込計算 | コマンドライン引数を検証して計算する | `question/question26.php` | `answer/answer26.php` |
+| 27 | CLIで名前チェック | 文字数を確認して入力を受け取る | `question/question27.php` | `answer/answer27.php` |
+| 28 | あいさつフォーム | フォーム入力を受け取り安全に表示する | `question/question28.php` | `answer/answer28.php` |
+| 29 | JSONで買い物メモ | JSONファイルに簡単な配列を保存する | `question/question29.php` | `answer/answer29.php` |
+| 30 | Todoクラス | クラスで小さなTodoを表す | `question/question30.php` | `answer/answer30.php` |
 
 ## おすすめの進め方
 
-1日30分から60分で進める場合の目安です。
+1日30分から60分で進める場合の目安です。問題数は増えましたが、難易度は初級のままです。
 
-- 1週目: 第1回から第3回。PHPの実行、変数、文字列に慣れる
-- 2週目: 第4回から第6回。条件分岐、繰り返し、配列を練習する
-- 3週目: 第7回から第9回。関数、連想配列、入力チェックを練習する
-- 4週目: 第10回から第12回。Web、保存、クラスを使って卒業課題を作る
+- 1週目: 第1題から第5題。PHPの実行、変数、文字列、条件分岐に慣れる
+- 2週目: 第6題から第10題。配列、関数、連想配列、CLI、Webフォームを試す
+- 3週目: 第11題から第15題。保存、クラス、変数、計算、文字列を復習する
+- 4週目: 第16題から第20題。条件分岐、繰り返し、配列を反復練習する
+- 5週目: 第21題から第25題。配列、関数、連想配列の組み合わせを練習する
+- 6週目: 第26題から第30題。CLI、フォーム、JSON、クラスをもう一度練習する
 
 ## 初級卒業チェック
 
@@ -88,7 +108,7 @@ php -S 127.0.0.1:8000 -t question
 - `htmlspecialchars` が必要な場面を説明できる
 - JSONファイルの読み書きで、配列と文字列の変換を説明できる
 - 小さな処理をクラスや関数に分けられる
-- 解答を見ずに第12回の卒業課題をもう一度作れる
+- 解答を見ずに第30題のTodoクラスをもう一度作れる
 
 ## ルール
 

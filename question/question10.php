@@ -1,6 +1,6 @@
 <?php
 /*
-第10回: Webフォーム
+第10題: Webフォーム
 
 やること:
 1. 身長cmと体重kgを入力するHTMLフォームを作る
@@ -22,7 +22,7 @@ http://127.0.0.1:8000/question10.php
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <title>第10回 Webフォーム</title>
+    <title>第10題 Webフォーム</title>
 </head>
 <body>
     <h1>TODO: BMIフォームを作ってください</h1>

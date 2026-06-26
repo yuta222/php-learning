@@ -31,7 +31,7 @@ function h(string $value): string
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <title>第10回 Webフォーム 解答</title>
+    <title>第10題 Webフォーム 解答</title>
 </head>
 <body>
     <h1>BMI計算</h1>
