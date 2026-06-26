@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="520" viewBox="0 0 920 520" role="img" aria-labelledby="title desc">
+  <title id="title">PHP初級卒業までの学習マップ</title>
+  <desc id="desc">PHPの基礎、制御、実践、卒業課題までの4段階を示した図</desc>
+  <rect width="920" height="520" rx="24" fill="#ffffff"/>
+  <rect x="32" y="32" width="856" height="456" rx="18" fill="#f6f8fb" stroke="#d8dee9"/>
+  <text x="64" y="82" fill="#1f2937" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="28" font-weight="700">PHP初級卒業ロードマップ</text>
+  <text x="64" y="116" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16">12個の練習で、表示から小さなアプリ作成まで進みます。</text>
+
+  <g transform="translate(64 160)">
+    <rect x="0" y="0" width="170" height="190" rx="12" fill="#ecfdf5" stroke="#16a34a"/>
+    <circle cx="34" cy="36" r="18" fill="#16a34a"/>
+    <text x="28" y="43" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18" font-weight="700">1</text>
+    <text x="22" y="78" fill="#14532d" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="20" font-weight="700">基礎</text>
+    <text x="22" y="112" fill="#166534" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15">第1回 echo</text>
+    <text x="22" y="140" fill="#166534" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15">第2回 変数</text>
+    <text x="22" y="168" fill="#166534" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15">第3回 文字列</text>
+  </g>
+
+  <path d="M252 255 H310" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M302 243 L318 255 L302 267" fill="none" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(332 160)">
+    <rect x="0" y="0" width="170" height="190" rx="12" fill="#eff6ff" stroke="#2563eb"/>
+    <circle cx="34" cy="36" r="18" fill="#2563eb"/>
+    <text x="28" y="43" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18" font-weight="700">2</text>
+    <text x="22" y="78" fill="#1e3a8a" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="20" font-weight="700">制御</text>
+    <text x="22" y="112" fill="#1d4ed8" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15">第4回 if</text>
+    <text x="22" y="140" fill="#1d4ed8" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15">第5回 loop</text>
+    <text x="22" y="168" fill="#1d4ed8" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15">第6回 array</text>
+  </g>
+
+  <path d="M520 255 H578" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M570 243 L586 255 L570 267" fill="none" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(600 160)">
+    <rect x="0" y="0" width="170" height="190" rx="12" fill="#fff7ed" stroke="#ea580c"/>
+    <circle cx="34" cy="36" r="18" fill="#ea580c"/>
+    <text x="28" y="43" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18" font-weight="700">3</text>
+    <text x="22" y="78" fill="#7c2d12" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="20" font-weight="700">実践</text>
+    <text x="22" y="112" fill="#c2410c" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15">第7回 関数</text>
+    <text x="22" y="140" fill="#c2410c" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15">第8回 連想配列</text>
+    <text x="22" y="168" fill="#c2410c" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15">第9回 CLI入力</text>
+  </g>
+
+  <g transform="translate(200 386)">
+    <rect x="0" y="0" width="520" height="64" rx="12" fill="#fdf2f8" stroke="#db2777"/>
+    <text x="22" y="40" fill="#831843" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18" font-weight="700">第10回 Webフォーム  第11回 JSON保存  第12回 クラスと卒業課題</text>
+  </g>
+</svg>

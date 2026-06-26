@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PHP初級卒業カリキュラム</title>
+    <meta name="description" content="超初心者がPHP初級を卒業するための12回分のカリキュラム、問題、解答一覧です。">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="#top" aria-label="PHP初級卒業カリキュラム トップへ">
+                <span class="brand-mark">PHP</span>
+                <span>PHP初級卒業</span>
+            </a>
+            <nav class="site-nav" aria-label="ページ内ナビゲーション">
+                <a href="#start">使い方</a>
+                <a href="#lessons">教材一覧</a>
+                <a href="#schedule">進め方</a>
+                <a href="#check">卒業チェック</a>
+                <a href="https://github.com/yuta222/php-learning">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top" class="page">
+        <section class="intro" aria-labelledby="page-title">
+            <div class="intro-copy">
+                <h1 id="page-title">PHP初級卒業<br>カリキュラム</h1>
+                <p class="lead">PHPだけで進める12回分の教材です。<br>問題、解答、卒業課題を一覧で確認できます。</p>
+                <div class="quick-actions" aria-label="主要リンク">
+                    <a class="button primary" href="#lessons">教材一覧を見る</a>
+                    <a class="button" href="README.md">READMEを開く</a>
+                    <a class="button" href="https://github.com/yuta222/php-learning">リポジトリを見る</a>
+                </div>
+                <div class="stats" aria-label="教材の概要">
+                    <div class="stat">
+                        <strong>12</strong>
+                        <span>レッスン</span>
+                    </div>
+                    <div class="stat">
+                        <strong>4</strong>
+                        <span>週間目安</span>
+                    </div>
+                    <div class="stat">
+                        <strong>0</strong>
+                        <span>フレームワーク</span>
+                    </div>
+                </div>
+            </div>
+            <figure class="map-figure">
+                <img src="assets/learning-map.svg" alt="PHP初級卒業ロードマップ">
+            </figure>
+        </section>
+
+        <section id="start" class="section" aria-labelledby="start-title">
+            <div class="section-header">
+                <div>
+                    <h2 id="start-title">使い方</h2>
+                    <p class="section-note">問題を書き、解答例と比べます。</p>
+                </div>
+            </div>
+            <div class="steps">
+                <div class="step-list">
+                    <article class="step">
+                        <span class="step-number">1</span>
+                        <h3>PHPの動作確認</h3>
+                        <p><code>php test.php</code> を実行します。</p>
+                    </article>
+                    <article class="step">
+                        <span class="step-number">2</span>
+                        <h3>問題を解く</h3>
+                        <p>TODOを読んでコードを書きます。</p>
+                    </article>
+                    <article class="step">
+                        <span class="step-number">3</span>
+                        <h3>解答と比べる</h3>
+                        <p>解答例と自分の書き方を比べます。</p>
+                    </article>
+                    <article class="step">
+                        <span class="step-number">4</span>
+                        <h3>もう一度書く</h3>
+                        <p>同じ問題をもう一度書き直します。</p>
+                    </article>
+                </div>
+                <aside class="command-box" aria-labelledby="command-title">
+                    <div id="command-title" class="command-title">実行コマンド</div>
+                    <pre><code>git clone https://github.com/yuta222/php-learning.git
+cd php-learning
+
+php test.php
+php question/question1.php
+php answer/answer1.php
+
+# 第10回 Webフォーム
+php -S 127.0.0.1:8000 -t question</code></pre>
+                </aside>
+            </div>
+        </section>
+
+        <section id="lessons" class="section" aria-labelledby="lessons-title">
+            <div class="section-header">
+                <div>
+                    <h2 id="lessons-title">教材一覧</h2>
+                    <p class="section-note">各回の問題と解答例をGitHubで開けます。PHPはGitHub Pages上では実行されません。</p>
+                </div>
+                <div class="filters" role="group" aria-label="教材フィルター">
+                    <button class="filter-button is-active" type="button" data-filter="all">すべて</button>
+                    <button class="filter-button" type="button" data-filter="basic">基礎</button>
+                    <button class="filter-button" type="button" data-filter="control">制御</button>
+                    <button class="filter-button" type="button" data-filter="practice">実践</button>
+                    <button class="filter-button" type="button" data-filter="final">卒業</button>
+                </div>
+            </div>
+
+            <div class="lesson-grid" id="lesson-grid">
+                <article class="lesson" data-stage="basic">
+                    <div class="lesson-top">
+                        <span class="lesson-number">第1回</span>
+                        <span class="tag basic">基礎</span>
+                    </div>
+                    <h3>はじめてのPHP</h3>
+                    <p><code>echo</code> と改行を使って、画面に文字を表示します。</p>
+                    <div class="lesson-links">
+                        <a href="https://github.com/yuta222/php-learning/blob/master/question/question1.php">問題</a>
+                        <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer1.php">解答</a>
+                    </div>
+                </article>
+                <article class="lesson" data-stage="basic">
+                    <div class="lesson-top">
+                        <span class="lesson-number">第2回</span>
+                        <span class="tag basic">基礎</span>
+                    </div>
+                    <h3>変数と計算</h3>
+                    <p>変数、数値計算、文字列結合を使って結果を表示します。</p>
+                    <div class="lesson-links">
+                        <a href="https://github.com/yuta222/php-learning/blob/master/question/question2.php">問題</a>
+                        <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer2.php">解答</a>
+                    </div>
+                </article>
+                <article class="lesson" data-stage="basic">
+                    <div class="lesson-top">
+                        <span class="lesson-number">第3回</span>
+                        <span class="tag basic">基礎</span>
+                    </div>
+                    <h3>文字列</h3>
+                    <p>文字列埋め込み、文字数の取得、表示用の整形を練習します。</p>
+                    <div class="lesson-links">
+                        <a href="https://github.com/yuta222/php-learning/blob/master/question/question3.php">問題</a>
+                        <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer3.php">解答</a>
+                    </div>
+                </article>
+                <article class="lesson" data-stage="control">
+                    <div class="lesson-top">
+                        <span class="lesson-number">第4回</span>
+                        <span class="tag control">制御</span>
+                    </div>
+                    <h3>条件分岐</h3>
+                    <p>点数をもとに、<code>if</code> で合否や評価を判定します。</p>
+                    <div class="lesson-links">
+                        <a href="https://github.com/yuta222/php-learning/blob/master/question/question4.php">問題</a>
+                        <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer4.php">解答</a>
+                    </div>
+                </article>
+                <article class="lesson" data-stage="control">
+                    <div class="lesson-top">
+                        <span class="lesson-number">第5回</span>
+                        <span class="tag control">制御</span>
+                    </div>
+                    <h3>繰り返し</h3>
+                    <p><code>for</code> と <code>while</code> で、同じ処理を繰り返します。</p>
+                    <div class="lesson-links">
+                        <a href="https://github.com/yuta222/php-learning/blob/master/question/question5.php">問題</a>
+                        <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer5.php">解答</a>
+                    </div>
+                </article>
+                <article class="lesson" data-stage="control">
+                    <div class="lesson-top">
+                        <span class="lesson-number">第6回</span>
+                        <span class="tag control">制御</span>
+                    </div>
+                    <h3>配列</h3>
+                    <p>複数の点数を配列で扱い、合計、平均、最大、最小を出します。</p>
+                    <div class="lesson-links">
+                        <a href="https://github.com/yuta222/php-learning/blob/master/question/question6.php">問題</a>
+                        <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer6.php">解答</a>
+                    </div>
+                </article>
+                <article class="lesson" data-stage="practice">
+                    <div class="lesson-top">
+                        <span class="lesson-number">第7回</span>
+                        <span class="tag practice">実践</span>
+                    </div>
+                    <h3>関数</h3>
+                    <p>よく使う処理を関数にまとめ、引数と戻り値を使います。</p>
+                    <div class="lesson-links">
+                        <a href="https://github.com/yuta222/php-learning/blob/master/question/question7.php">問題</a>
+                        <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer7.php">解答</a>
+                    </div>
+                </article>
+                <article class="lesson" data-stage="practice">
+                    <div class="lesson-top">
+                        <span class="lesson-number">第8回</span>
+                        <span class="tag practice">実践</span>
+                    </div>
+                    <h3>連想配列</h3>
+                    <p>商品データとカートを連想配列で表し、小計と合計を出します。</p>
+                    <div class="lesson-links">
+                        <a href="https://github.com/yuta222/php-learning/blob/master/question/question8.php">問題</a>
+                        <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer8.php">解答</a>
+                    </div>
+                </article>
+                <article class="lesson" data-stage="practice">
+                    <div class="lesson-top">
+                        <span class="lesson-number">第9回</span>
+                        <span class="tag practice">実践</span>
+                    </div>
+                    <h3>CLI入力と検証</h3>
+                    <p>コマンドライン引数を受け取り、入力チェックしてから処理します。</p>
+                    <div class="lesson-links">
+                        <a href="https://github.com/yuta222/php-learning/blob/master/question/question9.php">問題</a>
+                        <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer9.php">解答</a>
+                    </div>
+                </article>
+                <article class="lesson" data-stage="final">
+                    <div class="lesson-top">
+                        <span class="lesson-number">第10回</span>
+                        <span class="tag final">卒業</span>
+                    </div>
+                    <h3>Webフォーム</h3>
+                    <p>HTMLフォームから送られた値をPHPで処理し、BMIを計算します。</p>
+                    <div class="lesson-links">
+                        <a href="https://github.com/yuta222/php-learning/blob/master/question/question10.php">問題</a>
+                        <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer10.php">解答</a>
+                    </div>
+                </article>
+                <article class="lesson" data-stage="final">
+                    <div class="lesson-top">
+                        <span class="lesson-number">第11回</span>
+                        <span class="tag final">卒業</span>
+                    </div>
+                    <h3>JSONファイル保存</h3>
+                    <p>JSONファイルに日記データを保存し、あとから読み込みます。</p>
+                    <div class="lesson-links">
+                        <a href="https://github.com/yuta222/php-learning/blob/master/question/question11.php">問題</a>
+                        <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer11.php">解答</a>
+                    </div>
+                </article>
+                <article class="lesson" data-stage="final">
+                    <div class="lesson-top">
+                        <span class="lesson-number">第12回</span>
+                        <span class="tag final">卒業</span>
+                    </div>
+                    <h3>クラスと卒業課題</h3>
+                    <p>クラスを使い、小さな図書管理アプリを作ります。</p>
+                    <div class="lesson-links">
+                        <a href="https://github.com/yuta222/php-learning/blob/master/question/question12.php">問題</a>
+                        <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer12.php">解答</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="schedule" class="section" aria-labelledby="schedule-title">
+            <div class="section-header">
+                <div>
+                    <h2 id="schedule-title">4週間の進め方</h2>
+                    <p class="section-note">1日30分から60分を目安に、詰まったところを復習しながら進めます。</p>
+                </div>
+            </div>
+            <div class="weeks">
+                <article class="week">
+                    <h3>1週目</h3>
+                    <p>第1回から第3回。PHPの実行、変数、文字列に慣れます。</p>
+                </article>
+                <article class="week">
+                    <h3>2週目</h3>
+                    <p>第4回から第6回。条件分岐、繰り返し、配列を練習します。</p>
+                </article>
+                <article class="week">
+                    <h3>3週目</h3>
+                    <p>第7回から第9回。関数、連想配列、入力チェックを練習します。</p>
+                </article>
+                <article class="week">
+                    <h3>4週目</h3>
+                    <p>第10回から第12回。Web、保存、クラスを使って卒業課題を作ります。</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="check" class="section" aria-labelledby="check-title">
+            <div class="section-header">
+                <div>
+                    <h2 id="check-title">卒業チェック</h2>
+                    <p class="section-note">すべて説明できたら、PHP初級卒業です。</p>
+                </div>
+            </div>
+            <div class="checklist-panel">
+                <div class="checks" id="checks">
+                    <label class="check-item"><input type="checkbox"> エラーのファイル名と行番号を見て修正できる</label>
+                    <label class="check-item"><input type="checkbox"> 変数名を見て、何の値が入っているか説明できる</label>
+                    <label class="check-item"><input type="checkbox"> <code>if</code> の条件を日本語で説明できる</label>
+                    <label class="check-item"><input type="checkbox"> <code>foreach</code> で配列を1件ずつ処理できる</label>
+                    <label class="check-item"><input type="checkbox"> 関数の引数と戻り値を説明できる</label>
+                    <label class="check-item"><input type="checkbox"> 入力値の空文字や数値範囲を確認できる</label>
+                    <label class="check-item"><input type="checkbox"> <code>htmlspecialchars</code> が必要な場面を説明できる</label>
+                    <label class="check-item"><input type="checkbox"> JSONファイルの読み書きを説明できる</label>
+                    <label class="check-item"><input type="checkbox"> 処理をクラスや関数に分けられる</label>
+                    <label class="check-item"><input type="checkbox"> 解答を見ずに第12回をもう一度作れる</label>
+                </div>
+                <aside class="progress-box" aria-live="polite">
+                    <span class="progress-number"><span id="checked-count">0</span>/10</span>
+                    <p>チェックした項目数です。ブラウザを閉じると状態はリセットされます。</p>
+                    <div class="progress-bar" aria-hidden="true">
+                        <span id="progress-bar"></span>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <p>このページは <a href="https://github.com/yuta222/php-learning">yuta222/php-learning</a> の教材一覧です。PHPファイルはローカル環境で実行してください。</p>
+        </footer>
+    </main>
+
+    <script>
+        const filterButtons = document.querySelectorAll(".filter-button");
+        const lessons = document.querySelectorAll(".lesson");
+
+        filterButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const filter = button.dataset.filter;
+
+                filterButtons.forEach((item) => item.classList.remove("is-active"));
+                button.classList.add("is-active");
+
+                lessons.forEach((lesson) => {
+                    lesson.hidden = filter !== "all" && lesson.dataset.stage !== filter;
+                });
+            });
+        });
+
+        const checkboxes = document.querySelectorAll("#checks input[type='checkbox']");
+        const checkedCount = document.getElementById("checked-count");
+        const progressBar = document.getElementById("progress-bar");
+
+        function updateProgress() {
+            const count = Array.from(checkboxes).filter((checkbox) => checkbox.checked).length;
+            checkedCount.textContent = String(count);
+            progressBar.style.width = `${(count / checkboxes.length) * 100}%`;
+        }
+
+        checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener("change", updateProgress);
+        });
+
+        updateProgress();
+    </script>
+</body>
+</html>
