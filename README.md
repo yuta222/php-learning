@@ -30,8 +30,9 @@ php -v
 1. `question/questionN.php` を開いて問題文を読む
 2. TODOコメントの下に自分でコードを書く
 3. ターミナルで実行する
-4. 詰まったら `answer/answerN.php` を見て比べる
-5. 解答を見たあとは、もう一度何も見ずに書き直す
+4. 詰まったら `explanation/explanationN.md` を読む
+5. それでも難しければ `answer/answerN.php` を見て比べる
+6. 解答を見たあとは、もう一度何も見ずに書き直す
 
 例:
 
@@ -51,38 +52,38 @@ php -S 127.0.0.1:8000 -t question
 
 ## 学習順
 
-| 題 | テーマ | できるようになること | 問題 | 解答 |
-| --- | --- | --- | --- | --- |
-| 1 | はじめてのPHP | `echo` と改行を使って表示する | `question/question1.php` | `answer/answer1.php` |
-| 2 | 変数と計算 | 変数、数値計算、文字列結合を使う | `question/question2.php` | `answer/answer2.php` |
-| 3 | 文字列 | 文字列埋め込み、文字数、整形を使う | `question/question3.php` | `answer/answer3.php` |
-| 4 | 条件分岐 | 点数から合否や評価を判定する | `question/question4.php` | `answer/answer4.php` |
-| 5 | 繰り返し | `for` と `while` で同じ処理を繰り返す | `question/question5.php` | `answer/answer5.php` |
-| 6 | 配列 | 配列から合計、平均、最大、最小を出す | `question/question6.php` | `answer/answer6.php` |
-| 7 | 関数 | 同じ処理を関数にまとめる | `question/question7.php` | `answer/answer7.php` |
-| 8 | 連想配列 | 商品データとカートを扱う | `question/question8.php` | `answer/answer8.php` |
-| 9 | CLI入力と検証 | コマンドライン引数を受け取り、入力チェックする | `question/question9.php` | `answer/answer9.php` |
-| 10 | Webフォーム | HTMLフォームから送られた値をPHPで処理する | `question/question10.php` | `answer/answer10.php` |
-| 11 | JSONファイル保存 | データをファイルに保存して読み込む | `question/question11.php` | `answer/answer11.php` |
-| 12 | クラス練習 | クラスで小さな図書管理アプリを作る | `question/question12.php` | `answer/answer12.php` |
-| 13 | 自己紹介カード | 変数を使って複数行の文章を作る | `question/question13.php` | `answer/answer13.php` |
-| 14 | 割り勘計算 | 割り算を使って1人あたりの金額を出す | `question/question14.php` | `answer/answer14.php` |
-| 15 | メール文を作る | 変数を文章に埋め込んで表示する | `question/question15.php` | `answer/answer15.php` |
-| 16 | 年齢で料金を決める | 年齢ごとに料金を判定する | `question/question16.php` | `answer/answer16.php` |
-| 17 | 在庫判定 | 注文数と在庫数を比べて判定する | `question/question17.php` | `answer/answer17.php` |
-| 18 | 九九の一段 | `for` で決まった回数だけ計算する | `question/question18.php` | `answer/answer18.php` |
-| 19 | カウントダウン | `while` で数を減らしながら表示する | `question/question19.php` | `answer/answer19.php` |
-| 20 | 買い物リスト | 配列を番号付きで表示する | `question/question20.php` | `answer/answer20.php` |
-| 21 | 合格者だけ表示 | 配列と条件分岐を組み合わせる | `question/question21.php` | `answer/answer21.php` |
-| 22 | 四角形の面積 | 関数で計算処理をまとめる | `question/question22.php` | `answer/answer22.php` |
-| 23 | あいさつ関数 | 関数内で空文字を判定する | `question/question23.php` | `answer/answer23.php` |
-| 24 | ユーザー一覧 | 連想配列の一覧を表示する | `question/question24.php` | `answer/answer24.php` |
-| 25 | 在庫表 | 連想配列と条件分岐を組み合わせる | `question/question25.php` | `answer/answer25.php` |
-| 26 | CLIで税込計算 | コマンドライン引数を検証して計算する | `question/question26.php` | `answer/answer26.php` |
-| 27 | CLIで名前チェック | 文字数を確認して入力を受け取る | `question/question27.php` | `answer/answer27.php` |
-| 28 | あいさつフォーム | フォーム入力を受け取り安全に表示する | `question/question28.php` | `answer/answer28.php` |
-| 29 | JSONで買い物メモ | JSONファイルに簡単な配列を保存する | `question/question29.php` | `answer/answer29.php` |
-| 30 | Todoクラス | クラスで小さなTodoを表す | `question/question30.php` | `answer/answer30.php` |
+| 題 | テーマ | できるようになること | 問題 | 解説 | 解答 |
+| --- | --- | --- | --- | --- | --- |
+| 1 | はじめてのPHP | `echo` と改行を使って表示する | [問題](question/question1.php) | [解説](explanation/explanation1.md) | [解答](answer/answer1.php) |
+| 2 | 変数と計算 | 変数、数値計算、文字列結合を使う | [問題](question/question2.php) | [解説](explanation/explanation2.md) | [解答](answer/answer2.php) |
+| 3 | 文字列 | 文字列埋め込み、文字数、整形を使う | [問題](question/question3.php) | [解説](explanation/explanation3.md) | [解答](answer/answer3.php) |
+| 4 | 条件分岐 | 点数から合否や評価を判定する | [問題](question/question4.php) | [解説](explanation/explanation4.md) | [解答](answer/answer4.php) |
+| 5 | 繰り返し | `for` と `while` で同じ処理を繰り返す | [問題](question/question5.php) | [解説](explanation/explanation5.md) | [解答](answer/answer5.php) |
+| 6 | 配列 | 配列から合計、平均、最大、最小を出す | [問題](question/question6.php) | [解説](explanation/explanation6.md) | [解答](answer/answer6.php) |
+| 7 | 関数 | 同じ処理を関数にまとめる | [問題](question/question7.php) | [解説](explanation/explanation7.md) | [解答](answer/answer7.php) |
+| 8 | 連想配列 | 商品データとカートを扱う | [問題](question/question8.php) | [解説](explanation/explanation8.md) | [解答](answer/answer8.php) |
+| 9 | CLI入力と検証 | コマンドライン引数を受け取り、入力チェックする | [問題](question/question9.php) | [解説](explanation/explanation9.md) | [解答](answer/answer9.php) |
+| 10 | Webフォーム | HTMLフォームから送られた値をPHPで処理する | [問題](question/question10.php) | [解説](explanation/explanation10.md) | [解答](answer/answer10.php) |
+| 11 | JSONファイル保存 | データをファイルに保存して読み込む | [問題](question/question11.php) | [解説](explanation/explanation11.md) | [解答](answer/answer11.php) |
+| 12 | クラス練習 | クラスで小さな図書管理アプリを作る | [問題](question/question12.php) | [解説](explanation/explanation12.md) | [解答](answer/answer12.php) |
+| 13 | 自己紹介カード | 変数を使って複数行の文章を作る | [問題](question/question13.php) | [解説](explanation/explanation13.md) | [解答](answer/answer13.php) |
+| 14 | 割り勘計算 | 割り算を使って1人あたりの金額を出す | [問題](question/question14.php) | [解説](explanation/explanation14.md) | [解答](answer/answer14.php) |
+| 15 | メール文を作る | 変数を文章に埋め込んで表示する | [問題](question/question15.php) | [解説](explanation/explanation15.md) | [解答](answer/answer15.php) |
+| 16 | 年齢で料金を決める | 年齢ごとに料金を判定する | [問題](question/question16.php) | [解説](explanation/explanation16.md) | [解答](answer/answer16.php) |
+| 17 | 在庫判定 | 注文数と在庫数を比べて判定する | [問題](question/question17.php) | [解説](explanation/explanation17.md) | [解答](answer/answer17.php) |
+| 18 | 九九の一段 | `for` で決まった回数だけ計算する | [問題](question/question18.php) | [解説](explanation/explanation18.md) | [解答](answer/answer18.php) |
+| 19 | カウントダウン | `while` で数を減らしながら表示する | [問題](question/question19.php) | [解説](explanation/explanation19.md) | [解答](answer/answer19.php) |
+| 20 | 買い物リスト | 配列を番号付きで表示する | [問題](question/question20.php) | [解説](explanation/explanation20.md) | [解答](answer/answer20.php) |
+| 21 | 合格者だけ表示 | 配列と条件分岐を組み合わせる | [問題](question/question21.php) | [解説](explanation/explanation21.md) | [解答](answer/answer21.php) |
+| 22 | 四角形の面積 | 関数で計算処理をまとめる | [問題](question/question22.php) | [解説](explanation/explanation22.md) | [解答](answer/answer22.php) |
+| 23 | あいさつ関数 | 関数内で空文字を判定する | [問題](question/question23.php) | [解説](explanation/explanation23.md) | [解答](answer/answer23.php) |
+| 24 | ユーザー一覧 | 連想配列の一覧を表示する | [問題](question/question24.php) | [解説](explanation/explanation24.md) | [解答](answer/answer24.php) |
+| 25 | 在庫表 | 連想配列と条件分岐を組み合わせる | [問題](question/question25.php) | [解説](explanation/explanation25.md) | [解答](answer/answer25.php) |
+| 26 | CLIで税込計算 | コマンドライン引数を検証して計算する | [問題](question/question26.php) | [解説](explanation/explanation26.md) | [解答](answer/answer26.php) |
+| 27 | CLIで名前チェック | 文字数を確認して入力を受け取る | [問題](question/question27.php) | [解説](explanation/explanation27.md) | [解答](answer/answer27.php) |
+| 28 | あいさつフォーム | フォーム入力を受け取り安全に表示する | [問題](question/question28.php) | [解説](explanation/explanation28.md) | [解答](answer/answer28.php) |
+| 29 | JSONで買い物メモ | JSONファイルに簡単な配列を保存する | [問題](question/question29.php) | [解説](explanation/explanation29.md) | [解答](answer/answer29.php) |
+| 30 | Todoクラス | クラスで小さなTodoを表す | [問題](question/question30.php) | [解説](explanation/explanation30.md) | [解答](answer/answer30.php) |
 
 ## おすすめの進め方
 
