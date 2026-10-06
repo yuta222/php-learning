@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PHP初級卒業カリキュラム</title>
     <meta name="description" content="超初心者がPHP初級を卒業するための30題のカリキュラム、問題、解答一覧です。">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#top">本文へ移動</a>
     <header class="site-header">
         <div class="header-inner">
             <a class="brand" href="#top" aria-label="PHP初級卒業カリキュラム トップへ">
-                <span class="brand-mark">PHP</span>
-                <span>PHP初級卒業</span>
+                <span class="brand-mark" aria-hidden="true">PHP</span>
+                <span class="brand-text">PHP初級卒業</span>
             </a>
             <nav class="site-nav" aria-label="ページ内ナビゲーション">
                 <a href="#start">使い方</a>
@@ -24,34 +27,54 @@
         </div>
     </header>
 
-    <main id="top" class="page">
-        <section class="intro" aria-labelledby="page-title">
-            <div class="intro-copy">
+    <main id="top" class="page" tabindex="-1">
+        <section class="bento" aria-labelledby="page-title">
+            <div class="tile tile-intro">
                 <h1 id="page-title">PHP初級卒業<br>カリキュラム</h1>
                 <p class="lead">PHPだけで進める30題の教材です。<br>難易度は上げず、問題と解答を一覧で確認できます。</p>
-                <div class="quick-actions" aria-label="主要リンク">
+                <div class="quick-actions">
                     <a class="button primary" href="#lessons">教材一覧を見る</a>
                     <a class="button" href="README.md">READMEを開く</a>
                     <a class="button" href="https://github.com/yuta222/php-learning">リポジトリを見る</a>
                 </div>
-                <div class="stats" aria-label="教材の概要">
-                    <div class="stat">
-                        <strong>30</strong>
-                        <span>問題</span>
-                    </div>
-                    <div class="stat">
-                        <strong>6</strong>
-                        <span>週間目安</span>
-                    </div>
-                    <div class="stat">
-                        <strong>0</strong>
-                        <span>フレームワーク</span>
-                    </div>
-                </div>
             </div>
-            <figure class="map-figure">
-                <img src="assets/learning-map.svg" alt="PHP初級卒業ロードマップ">
+            <figure class="tile tile-map">
+                <img src="assets/learning-map.svg" alt="PHP初級卒業ロードマップ" width="920" height="520">
             </figure>
+            <div class="tile tile-stat tile-stat-1">
+                <strong class="stat-num">30</strong>
+                <span class="stat-label">問題</span>
+            </div>
+            <div class="tile tile-stat tile-stat-2">
+                <strong class="stat-num">6</strong>
+                <span class="stat-label">週間が目安</span>
+            </div>
+            <div class="tile tile-stat tile-stat-3">
+                <strong class="stat-num">0</strong>
+                <span class="stat-label">フレームワーク</span>
+            </div>
+            <div class="tile tile-env">
+                <span class="tile-label">動作環境</span>
+                <strong class="env-version">PHP 8.2 以上</strong>
+                <p class="tile-note">8.4 で全解答を確認（2026年10月）</p>
+            </div>
+            <div class="tile tile-command">
+                <div class="tile-row">
+                    <span class="tile-label">最初に動かすコマンド</span>
+                    <span class="copy-status" id="quick-copy-status" role="status" aria-live="polite"></span>
+                </div>
+                <div class="code-line">
+                    <code id="quick-command">php question/question1.php</code>
+                    <button class="copy-button" type="button" data-copy-target="quick-command" data-copy-status="quick-copy-status"><span class="visually-hidden">最初のコマンドを</span>コピー</button>
+                </div>
+                <p class="tile-note">リポジトリのフォルダで実行します。</p>
+            </div>
+            <a class="tile tile-progress" href="#lessons">
+                <span class="tile-label">進み具合</span>
+                <span class="progress-text">できた題 <strong class="progress-count" data-done-count>0</strong><span class="progress-total">/30</span></span>
+                <span class="progress-bar" aria-hidden="true"><span data-done-bar></span></span>
+                <span class="tile-more">教材一覧で記録する</span>
+            </a>
         </section>
 
         <section id="start" class="section" aria-labelledby="start-title">
@@ -66,7 +89,7 @@
                     <article class="step">
                         <span class="step-number">1</span>
                         <h3>PHPの確認</h3>
-                        <p><code>php -v</code> を実行します。</p>
+                        <p><code>php -v</code> を実行し、8.2 以上か確かめます。</p>
                     </article>
                     <article class="step">
                         <span class="step-number">2</span>
@@ -88,10 +111,20 @@
                         <h3>もう一度書く</h3>
                         <p>同じ問題をもう一度書き直します。</p>
                     </article>
+                    <aside class="version-note" aria-labelledby="version-title">
+                        <h3 id="version-title">動作環境</h3>
+                        <p>PHP 8.2 以上で動きます。これから入れるなら 8.4 か 8.5 を使ってください。全30題の解答は PHP 8.4 で動作を確認しています（2026年10月）。</p>
+                    </aside>
                 </div>
                 <aside class="command-box" aria-labelledby="command-title">
-                    <div id="command-title" class="command-title">実行コマンド</div>
-                    <pre><code>git clone https://github.com/yuta222/php-learning.git
+                    <div class="command-head">
+                        <div id="command-title" class="command-title">実行コマンド</div>
+                        <div class="command-tools">
+                            <span class="copy-status" id="setup-copy-status" role="status" aria-live="polite"></span>
+                            <button class="copy-button" type="button" data-copy-target="setup-commands" data-copy-status="setup-copy-status"><span class="visually-hidden">実行コマンドを</span>コピー</button>
+                        </div>
+                    </div>
+                    <pre><code id="setup-commands">git clone https://github.com/yuta222/php-learning.git
 cd php-learning
 
 php -v
@@ -108,19 +141,23 @@ php -S 127.0.0.1:8000 -t question</code></pre>
             <div class="section-header">
                 <div>
                     <h2 id="lessons-title">教材一覧</h2>
-                    <p class="section-note">GitHubで問題・解説・解答を開けます。<br>PHPはPCで実行します。</p>
+                    <p class="section-note">GitHubで問題・解説・解答を開けます。<br>PHPはPCで実行します。<br>解けたら「できたら押す」を押します。記録はこのブラウザに保存されます。</p>
+                    <div class="done-summary">
+                        <p class="done-count" aria-live="polite" aria-atomic="true">できた題 <strong data-done-count>0</strong>/30</p>
+                        <span class="progress-bar" aria-hidden="true"><span data-done-bar></span></span>
+                    </div>
                 </div>
                 <div class="filters" role="group" aria-label="教材フィルター">
-                    <button class="filter-button is-active" type="button" data-filter="all">すべて</button>
-                    <button class="filter-button" type="button" data-filter="basic">基礎</button>
-                    <button class="filter-button" type="button" data-filter="control">制御</button>
-                    <button class="filter-button" type="button" data-filter="practice">実践</button>
-                    <button class="filter-button" type="button" data-filter="final">卒業</button>
+                    <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">すべて</button>
+                    <button class="filter-button" type="button" data-filter="basic" aria-pressed="false">基礎</button>
+                    <button class="filter-button" type="button" data-filter="control" aria-pressed="false">制御</button>
+                    <button class="filter-button" type="button" data-filter="practice" aria-pressed="false">実践</button>
+                    <button class="filter-button" type="button" data-filter="final" aria-pressed="false">卒業</button>
                 </div>
             </div>
 
             <div class="lesson-grid" id="lesson-grid">
-                <article class="lesson" data-stage="basic">
+                <article class="lesson" data-stage="basic" data-lesson="1">
                     <div class="lesson-top">
                         <span class="lesson-number">第1題</span>
                         <span class="tag basic">基礎</span>
@@ -132,8 +169,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation1.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer1.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第1題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="basic">
+                <article class="lesson" data-stage="basic" data-lesson="2">
                     <div class="lesson-top">
                         <span class="lesson-number">第2題</span>
                         <span class="tag basic">基礎</span>
@@ -145,8 +183,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation2.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer2.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第2題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="basic">
+                <article class="lesson" data-stage="basic" data-lesson="3">
                     <div class="lesson-top">
                         <span class="lesson-number">第3題</span>
                         <span class="tag basic">基礎</span>
@@ -158,8 +197,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation3.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer3.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第3題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="control">
+                <article class="lesson" data-stage="control" data-lesson="4">
                     <div class="lesson-top">
                         <span class="lesson-number">第4題</span>
                         <span class="tag control">制御</span>
@@ -171,8 +211,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation4.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer4.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第4題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="control">
+                <article class="lesson" data-stage="control" data-lesson="5">
                     <div class="lesson-top">
                         <span class="lesson-number">第5題</span>
                         <span class="tag control">制御</span>
@@ -184,8 +225,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation5.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer5.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第5題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="control">
+                <article class="lesson" data-stage="control" data-lesson="6">
                     <div class="lesson-top">
                         <span class="lesson-number">第6題</span>
                         <span class="tag control">制御</span>
@@ -197,8 +239,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation6.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer6.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第6題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="practice">
+                <article class="lesson" data-stage="practice" data-lesson="7">
                     <div class="lesson-top">
                         <span class="lesson-number">第7題</span>
                         <span class="tag practice">実践</span>
@@ -210,8 +253,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation7.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer7.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第7題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="practice">
+                <article class="lesson" data-stage="practice" data-lesson="8">
                     <div class="lesson-top">
                         <span class="lesson-number">第8題</span>
                         <span class="tag practice">実践</span>
@@ -223,8 +267,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation8.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer8.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第8題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="practice">
+                <article class="lesson" data-stage="practice" data-lesson="9">
                     <div class="lesson-top">
                         <span class="lesson-number">第9題</span>
                         <span class="tag practice">実践</span>
@@ -236,8 +281,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation9.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer9.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第9題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="final">
+                <article class="lesson" data-stage="final" data-lesson="10">
                     <div class="lesson-top">
                         <span class="lesson-number">第10題</span>
                         <span class="tag final">卒業</span>
@@ -249,8 +295,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation10.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer10.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第10題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="final">
+                <article class="lesson" data-stage="final" data-lesson="11">
                     <div class="lesson-top">
                         <span class="lesson-number">第11題</span>
                         <span class="tag final">卒業</span>
@@ -262,8 +309,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation11.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer11.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第11題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="final">
+                <article class="lesson" data-stage="final" data-lesson="12">
                     <div class="lesson-top">
                         <span class="lesson-number">第12題</span>
                         <span class="tag final">卒業</span>
@@ -275,8 +323,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation12.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer12.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第12題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="basic">
+                <article class="lesson" data-stage="basic" data-lesson="13">
                     <div class="lesson-top">
                         <span class="lesson-number">第13題</span>
                         <span class="tag basic">基礎</span>
@@ -288,8 +337,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation13.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer13.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第13題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="basic">
+                <article class="lesson" data-stage="basic" data-lesson="14">
                     <div class="lesson-top">
                         <span class="lesson-number">第14題</span>
                         <span class="tag basic">基礎</span>
@@ -301,8 +351,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation14.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer14.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第14題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="basic">
+                <article class="lesson" data-stage="basic" data-lesson="15">
                     <div class="lesson-top">
                         <span class="lesson-number">第15題</span>
                         <span class="tag basic">基礎</span>
@@ -314,8 +365,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation15.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer15.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第15題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="control">
+                <article class="lesson" data-stage="control" data-lesson="16">
                     <div class="lesson-top">
                         <span class="lesson-number">第16題</span>
                         <span class="tag control">制御</span>
@@ -327,8 +379,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation16.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer16.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第16題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="control">
+                <article class="lesson" data-stage="control" data-lesson="17">
                     <div class="lesson-top">
                         <span class="lesson-number">第17題</span>
                         <span class="tag control">制御</span>
@@ -340,8 +393,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation17.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer17.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第17題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="control">
+                <article class="lesson" data-stage="control" data-lesson="18">
                     <div class="lesson-top">
                         <span class="lesson-number">第18題</span>
                         <span class="tag control">制御</span>
@@ -353,8 +407,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation18.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer18.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第18題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="control">
+                <article class="lesson" data-stage="control" data-lesson="19">
                     <div class="lesson-top">
                         <span class="lesson-number">第19題</span>
                         <span class="tag control">制御</span>
@@ -366,8 +421,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation19.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer19.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第19題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="control">
+                <article class="lesson" data-stage="control" data-lesson="20">
                     <div class="lesson-top">
                         <span class="lesson-number">第20題</span>
                         <span class="tag control">制御</span>
@@ -379,8 +435,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation20.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer20.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第20題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="control">
+                <article class="lesson" data-stage="control" data-lesson="21">
                     <div class="lesson-top">
                         <span class="lesson-number">第21題</span>
                         <span class="tag control">制御</span>
@@ -392,8 +449,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation21.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer21.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第21題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="practice">
+                <article class="lesson" data-stage="practice" data-lesson="22">
                     <div class="lesson-top">
                         <span class="lesson-number">第22題</span>
                         <span class="tag practice">実践</span>
@@ -405,8 +463,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation22.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer22.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第22題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="practice">
+                <article class="lesson" data-stage="practice" data-lesson="23">
                     <div class="lesson-top">
                         <span class="lesson-number">第23題</span>
                         <span class="tag practice">実践</span>
@@ -418,8 +477,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation23.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer23.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第23題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="practice">
+                <article class="lesson" data-stage="practice" data-lesson="24">
                     <div class="lesson-top">
                         <span class="lesson-number">第24題</span>
                         <span class="tag practice">実践</span>
@@ -431,8 +491,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation24.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer24.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第24題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="practice">
+                <article class="lesson" data-stage="practice" data-lesson="25">
                     <div class="lesson-top">
                         <span class="lesson-number">第25題</span>
                         <span class="tag practice">実践</span>
@@ -444,8 +505,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation25.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer25.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第25題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="practice">
+                <article class="lesson" data-stage="practice" data-lesson="26">
                     <div class="lesson-top">
                         <span class="lesson-number">第26題</span>
                         <span class="tag practice">実践</span>
@@ -457,8 +519,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation26.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer26.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第26題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="practice">
+                <article class="lesson" data-stage="practice" data-lesson="27">
                     <div class="lesson-top">
                         <span class="lesson-number">第27題</span>
                         <span class="tag practice">実践</span>
@@ -470,8 +533,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation27.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer27.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第27題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="final">
+                <article class="lesson" data-stage="final" data-lesson="28">
                     <div class="lesson-top">
                         <span class="lesson-number">第28題</span>
                         <span class="tag final">卒業</span>
@@ -483,8 +547,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation28.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer28.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第28題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="final">
+                <article class="lesson" data-stage="final" data-lesson="29">
                     <div class="lesson-top">
                         <span class="lesson-number">第29題</span>
                         <span class="tag final">卒業</span>
@@ -496,8 +561,9 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation29.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer29.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第29題 </span><span class="done-label">できたら押す</span></button>
                 </article>
-                <article class="lesson" data-stage="final">
+                <article class="lesson" data-stage="final" data-lesson="30">
                     <div class="lesson-top">
                         <span class="lesson-number">第30題</span>
                         <span class="tag final">卒業</span>
@@ -509,6 +575,7 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                         <a href="https://github.com/yuta222/php-learning/blob/master/explanation/explanation30.md">解説</a>
                         <a href="https://github.com/yuta222/php-learning/blob/master/answer/answer30.php">解答</a>
                     </div>
+                    <button class="done-toggle" type="button" aria-pressed="false"><span class="done-box" aria-hidden="true"></span><span class="visually-hidden">第30題 </span><span class="done-label">できたら押す</span></button>
                 </article>
             </div>
         </section>
@@ -568,12 +635,13 @@ php -S 127.0.0.1:8000 -t question</code></pre>
                     <label class="check-item"><input type="checkbox"> 処理をクラスや関数に分けられる</label>
                     <label class="check-item"><input type="checkbox"> 解答を見ずに第30題をもう一度作れる</label>
                 </div>
-                <aside class="progress-box" aria-live="polite">
-                    <span class="progress-number"><span id="checked-count">0</span>/10</span>
-                    <p>チェックした項目数です。ブラウザを閉じると状態はリセットされます。</p>
+                <aside class="progress-box" aria-labelledby="check-progress-label">
+                    <span class="progress-number" aria-live="polite" aria-atomic="true"><span class="visually-hidden">チェック済み </span><span id="checked-count">0</span>/10</span>
+                    <p id="check-progress-label">チェックした項目数です。チェックはこのブラウザに保存されます。</p>
                     <div class="progress-bar" aria-hidden="true">
                         <span id="progress-bar"></span>
                     </div>
+                    <button class="button" type="button" id="reset-checks">チェックを外す</button>
                 </aside>
             </div>
         </section>
@@ -584,37 +652,233 @@ php -S 127.0.0.1:8000 -t question</code></pre>
     </main>
 
     <script>
-        const filterButtons = document.querySelectorAll(".filter-button");
-        const lessons = document.querySelectorAll(".lesson");
+        (function () {
+            "use strict";
 
-        filterButtons.forEach((button) => {
-            button.addEventListener("click", () => {
-                const filter = button.dataset.filter;
+            const DONE_KEY = "php-learning:done";
+            const CHECKS_KEY = "php-learning:checks";
 
-                filterButtons.forEach((item) => item.classList.remove("is-active"));
-                button.classList.add("is-active");
+            // 保存できない環境（プライベートブラウズなど）でも、ページはそのまま動くようにする
+            function readNumbers(key) {
+                try {
+                    const raw = window.localStorage.getItem(key);
+                    if (!raw) {
+                        return [];
+                    }
+                    const parsed = JSON.parse(raw);
+                    return Array.isArray(parsed) ? parsed.filter((value) => Number.isInteger(value)) : [];
+                } catch (error) {
+                    return [];
+                }
+            }
 
-                lessons.forEach((lesson) => {
-                    lesson.hidden = filter !== "all" && lesson.dataset.stage !== filter;
+            function writeNumbers(key, numbers) {
+                try {
+                    window.localStorage.setItem(key, JSON.stringify(numbers));
+                } catch (error) {
+                    // 保存できないときは、このページを開いている間だけ状態を持つ
+                }
+            }
+
+            /* ---------- 教材フィルター ---------- */
+
+            const filterButtons = document.querySelectorAll(".filter-button");
+            const lessons = Array.from(document.querySelectorAll(".lesson"));
+
+            filterButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    const filter = button.dataset.filter;
+
+                    filterButtons.forEach((item) => {
+                        const isActive = item === button;
+                        item.classList.toggle("is-active", isActive);
+                        item.setAttribute("aria-pressed", String(isActive));
+                    });
+
+                    lessons.forEach((lesson) => {
+                        lesson.hidden = filter !== "all" && lesson.dataset.stage !== filter;
+                    });
                 });
             });
-        });
 
-        const checkboxes = document.querySelectorAll("#checks input[type='checkbox']");
-        const checkedCount = document.getElementById("checked-count");
-        const progressBar = document.getElementById("progress-bar");
+            /* ---------- できた題 ---------- */
 
-        function updateProgress() {
-            const count = Array.from(checkboxes).filter((checkbox) => checkbox.checked).length;
-            checkedCount.textContent = String(count);
-            progressBar.style.width = `${(count / checkboxes.length) * 100}%`;
-        }
+            const totalLessons = lessons.length;
+            const doneCountTargets = document.querySelectorAll("[data-done-count]");
+            const doneBarTargets = document.querySelectorAll("[data-done-bar]");
+            const done = new Set(
+                readNumbers(DONE_KEY).filter((number) => number >= 1 && number <= totalLessons)
+            );
 
-        checkboxes.forEach((checkbox) => {
-            checkbox.addEventListener("change", updateProgress);
-        });
+            function renderLesson(lesson) {
+                const number = Number(lesson.dataset.lesson);
+                const isDone = done.has(number);
+                const toggle = lesson.querySelector(".done-toggle");
+                const label = lesson.querySelector(".done-label");
 
-        updateProgress();
+                lesson.classList.toggle("is-done", isDone);
+                if (toggle) {
+                    toggle.setAttribute("aria-pressed", String(isDone));
+                }
+                if (label) {
+                    label.textContent = isDone ? "できた" : "できたら押す";
+                }
+            }
+
+            function renderDoneSummary() {
+                const count = done.size;
+                const width = totalLessons ? `${(count / totalLessons) * 100}%` : "0%";
+                doneCountTargets.forEach((target) => {
+                    target.textContent = String(count);
+                });
+                doneBarTargets.forEach((target) => {
+                    target.style.width = width;
+                });
+            }
+
+            lessons.forEach((lesson) => {
+                const toggle = lesson.querySelector(".done-toggle");
+                renderLesson(lesson);
+
+                if (!toggle) {
+                    return;
+                }
+                toggle.addEventListener("click", () => {
+                    const number = Number(lesson.dataset.lesson);
+                    if (done.has(number)) {
+                        done.delete(number);
+                    } else {
+                        done.add(number);
+                    }
+                    writeNumbers(DONE_KEY, Array.from(done).sort((a, b) => a - b));
+                    renderLesson(lesson);
+                    renderDoneSummary();
+                });
+            });
+
+            renderDoneSummary();
+
+            /* ---------- 卒業チェック ---------- */
+
+            const checkboxes = Array.from(document.querySelectorAll("#checks input[type='checkbox']"));
+            const checkedCount = document.getElementById("checked-count");
+            const progressBar = document.getElementById("progress-bar");
+            const resetChecks = document.getElementById("reset-checks");
+            const savedChecks = new Set(readNumbers(CHECKS_KEY));
+
+            checkboxes.forEach((checkbox, index) => {
+                checkbox.checked = savedChecks.has(index);
+            });
+
+            function saveChecks() {
+                const checkedIndexes = [];
+                checkboxes.forEach((checkbox, index) => {
+                    if (checkbox.checked) {
+                        checkedIndexes.push(index);
+                    }
+                });
+                writeNumbers(CHECKS_KEY, checkedIndexes);
+            }
+
+            function updateProgress() {
+                const count = checkboxes.filter((checkbox) => checkbox.checked).length;
+                if (checkedCount) {
+                    checkedCount.textContent = String(count);
+                }
+                if (progressBar && checkboxes.length) {
+                    progressBar.style.width = `${(count / checkboxes.length) * 100}%`;
+                }
+            }
+
+            checkboxes.forEach((checkbox) => {
+                checkbox.addEventListener("change", () => {
+                    saveChecks();
+                    updateProgress();
+                });
+            });
+
+            if (resetChecks) {
+                resetChecks.addEventListener("click", () => {
+                    checkboxes.forEach((checkbox) => {
+                        checkbox.checked = false;
+                    });
+                    saveChecks();
+                    updateProgress();
+                });
+            }
+
+            updateProgress();
+
+            /* ---------- コマンドのコピー ---------- */
+
+            function copyWithSelection(text) {
+                const area = document.createElement("textarea");
+                area.value = text;
+                area.setAttribute("readonly", "");
+                area.style.position = "fixed";
+                area.style.top = "0";
+                area.style.left = "-9999px";
+                document.body.appendChild(area);
+                area.select();
+                let copied = false;
+                try {
+                    copied = document.execCommand("copy");
+                } catch (error) {
+                    copied = false;
+                }
+                document.body.removeChild(area);
+                return copied;
+            }
+
+            function copyText(text) {
+                if (navigator.clipboard && window.isSecureContext) {
+                    return navigator.clipboard.writeText(text).then(
+                        () => true,
+                        () => copyWithSelection(text)
+                    );
+                }
+                return Promise.resolve(copyWithSelection(text));
+            }
+
+            function selectContents(element) {
+                try {
+                    const range = document.createRange();
+                    range.selectNodeContents(element);
+                    const selection = window.getSelection();
+                    selection.removeAllRanges();
+                    selection.addRange(range);
+                } catch (error) {
+                    // 選択できない環境では何もしない
+                }
+            }
+
+            document.querySelectorAll("[data-copy-target]").forEach((button) => {
+                const source = document.getElementById(button.dataset.copyTarget);
+                const status = document.getElementById(button.dataset.copyStatus);
+                let timer = 0;
+
+                if (!source) {
+                    return;
+                }
+
+                button.addEventListener("click", () => {
+                    copyText(source.textContent.trim()).then((copied) => {
+                        if (!copied) {
+                            selectContents(source);
+                        }
+                        if (status) {
+                            status.textContent = copied
+                                ? "コピーしました"
+                                : "コピーできませんでした。選択した文字をコピーしてください。";
+                            window.clearTimeout(timer);
+                            timer = window.setTimeout(() => {
+                                status.textContent = "";
+                            }, copied ? 2000 : 5000);
+                        }
+                    });
+                });
+            });
+        })();
     </script>
 </body>
 </html>
